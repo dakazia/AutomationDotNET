@@ -7,9 +7,9 @@ namespace AutomationFramework.Utils
 {
     class BrowserFactory
     {
-        private static readonly ThreadLocal<IWebDriver> _webDriver = new();
+        private static readonly ThreadLocal<IWebDriver> WebDriver = new();
 
-        public static IWebDriver Instance => _webDriver.Value ?? SetUpBrowser();
+        public static IWebDriver Instance => WebDriver.Value ?? SetUpBrowser();
 
         private static IWebDriver SetUpBrowser()
         {
@@ -28,16 +28,18 @@ namespace AutomationFramework.Utils
                 default: throw new ArgumentException();
             }
 
+            var pageLoadTimeout = int.Parse(PropertiesReader.GetProperty("PageLoadTimeOutMs", "Properties.xml"));
+
             driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(10000);
-            _webDriver.Value = driver;
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(pageLoadTimeout);
+            WebDriver.Value = driver;
             return driver;
         }
 
         public static void CloseBrowser()
         {
-            _webDriver.Value?.Quit();
-            _webDriver.Value = null;
+            WebDriver.Value?.Quit();
+            WebDriver.Value = null;
         }
     }
 }

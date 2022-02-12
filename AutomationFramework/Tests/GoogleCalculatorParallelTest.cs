@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutomationFramework.Utils;
+﻿using AutomationFramework.Utils;
 using NUnit.Framework;
 
 namespace AutomationFramework.Tests

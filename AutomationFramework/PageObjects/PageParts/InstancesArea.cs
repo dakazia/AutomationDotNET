@@ -18,13 +18,13 @@ namespace AutomationFramework.PageObjects.PageParts
     {
         private IWebElement _webElementContainer;
 
-        public IWebElement Instances => _webElementContainer.FindElement(By.XPath(".//*[@id='input_75']"));
+        public IWebElement Instances => _webElementContainer.FindElement(By.XPath(".//*[@id='input_77']"));
 
-        public IWebElement MachineType => _webElementContainer.FindElement(By.XPath(".//*[@id = 'select_102']"));
+        public IWebElement MachineType => _webElementContainer.FindElement(By.XPath(".//*[@id = 'select_104']"));
 
-        public IWebElement Series => _webElementContainer.FindElement(By.XPath(".//*[@id = 'select_100']"));
+        public IWebElement Series => _webElementContainer.FindElement(By.XPath(".//*[@id = 'select_102']"));
 
-        public IWebElement DataCenterLocation => _webElementContainer.FindElement(By.XPath(".//*[@id = 'select_108']"));
+        public IWebElement DataCenterLocation => _webElementContainer.FindElement(By.XPath(".//*[@id = 'select_110']"));
 
         public IWebElement AddToEstimateButton =>
             _webElementContainer.FindElement(By.XPath(".//button[@aria-label='Add to Estimate']"));

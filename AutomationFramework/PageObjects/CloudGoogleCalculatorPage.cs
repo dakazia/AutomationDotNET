@@ -27,13 +27,12 @@ namespace AutomationFramework.PageObjects
         public IWebElement FrameInsideFrameCalculator =>
             Browser.FindElement(By.XPath("//*[@id='myFrame']"));
 
-        public CloudGoogleCalculatorPage(IWebDriver webDriver) : base(webDriver)
-        {
-        }
-
         public ICalculatorPart CalculatorPart =>
             ObjectFactory.Get<ICalculatorPart>("//*[@class='compute-engine-block']");
 
+        public CloudGoogleCalculatorPage(IWebDriver webDriver) : base(webDriver)
+        {
+        }
 
         public void OpenPage()
         {

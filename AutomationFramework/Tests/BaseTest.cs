@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutomationFramework.PageObjects;
+﻿using AutomationFramework.PageObjects;
 using AutomationFramework.PageServices;
 using AutomationFramework.Utils;
 

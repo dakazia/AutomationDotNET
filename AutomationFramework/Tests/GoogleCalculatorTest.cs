@@ -1,6 +1,4 @@
-﻿using System;
-using AutomationFramework.PageObjects;
-using AutomationFramework.Utils;
+﻿using AutomationFramework.Utils;
 using NUnit.Framework;
 
 namespace AutomationFramework.Tests
@@ -19,7 +17,6 @@ namespace AutomationFramework.Tests
         [Test]
         public void VerifyEnablingButtons()
         {
-
             var instanceArea = CalculatorPage.CalculatorPart.InstancesArea;
 
             instanceArea.Instances.SendKeys(two);
@@ -28,8 +25,6 @@ namespace AutomationFramework.Tests
             CalculatorPage.CalculatorPart.SelectItem(instanceArea.DataCenterLocation, BelgiumLocation);
 
             Assert.IsTrue(instanceArea.AddToEstimateButton.Enabled, "Add to Estimate button isn't enabled");
-
-            instanceArea.AddToEstimateButton.Click();
 
             var soleTenantArea = CalculatorPage.CalculatorPart.SoleTenantNodesArea;
 
@@ -41,11 +36,6 @@ namespace AutomationFramework.Tests
             CalculatorPage.CalculatorPart.SelectItem(soleTenantArea.GpuNumber, eight);
 
             Assert.IsTrue(CalculatorPage.CalculatorPart.SoleTenantNodesArea.AddToEstimateButton.Enabled, "Add to Estimate button isn't enabled");
-            CalculatorPage.CalculatorPart.SoleTenantNodesArea.AddToEstimateButton.Click();
-
-
-
-            Thread.Sleep(3000);
         }
 
         [OneTimeTearDown]
