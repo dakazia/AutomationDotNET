@@ -2,9 +2,8 @@
 - Autofac dependency injection
 - locators chains
 - parallel execution
-- Thread safe approach
-Patterns: 
-- Page object
+- Thread safe approach 
+- Page objects
 - Page parts
 - Buisness objects
 - Factory
